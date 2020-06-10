@@ -89,8 +89,8 @@
   <ItemGroup>
     <CustomBuild Include="cpp_file.i">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Ahmed\Documents\GitHub\ATSSim\swigwin-4.0.1\swig.exe -csharp -c++ -outdir ..\TestSwigCallback\Generated cpp_file.i</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Ahmed\Documents\GitHub\ATSSim\swigwin-4.0.1\swig.exe -csharp -c++ -outdir ..\TestSwigCallback\Generated cpp_file.i</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">swig -csharp -c++ -outdir ..\TestSwigCallback\Generated cpp_file.i</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">swig -csharp -c++ -outdir ..\TestSwigCallback\Generated cpp_file.i</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cpp_file_wrap.cxx</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cpp_file_wrap.cxx</Outputs>
     </CustomBuild>
