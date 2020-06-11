@@ -15,19 +15,23 @@ class SwigDirector_MyCalc : public MyCalc, public Swig::Director {
 
 public:
     SwigDirector_MyCalc();
+    virtual ~SwigDirector_MyCalc();
+    virtual void DoMath(int n1, int n2, Result &r);
     virtual int add(int arg0, int arg1);
     virtual int Mul(int arg0, int arg1);
     virtual void Print(std::string v);
 
-    typedef int (SWIGSTDCALL* SWIG_Callback0_t)(int, int);
+    typedef void (SWIGSTDCALL* SWIG_Callback0_t)(int, int, void *);
     typedef int (SWIGSTDCALL* SWIG_Callback1_t)(int, int);
-    typedef void (SWIGSTDCALL* SWIG_Callback2_t)(char *);
-    void swig_connect_director(SWIG_Callback0_t callbackadd, SWIG_Callback1_t callbackMul, SWIG_Callback2_t callbackPrint);
+    typedef int (SWIGSTDCALL* SWIG_Callback2_t)(int, int);
+    typedef void (SWIGSTDCALL* SWIG_Callback3_t)(char *);
+    void swig_connect_director(SWIG_Callback0_t callbackDoMath, SWIG_Callback1_t callbackadd, SWIG_Callback2_t callbackMul, SWIG_Callback3_t callbackPrint);
 
 private:
-    SWIG_Callback0_t swig_callbackadd;
-    SWIG_Callback1_t swig_callbackMul;
-    SWIG_Callback2_t swig_callbackPrint;
+    SWIG_Callback0_t swig_callbackDoMath;
+    SWIG_Callback1_t swig_callbackadd;
+    SWIG_Callback2_t swig_callbackMul;
+    SWIG_Callback3_t swig_callbackPrint;
     void swig_init_callbacks();
 };
 

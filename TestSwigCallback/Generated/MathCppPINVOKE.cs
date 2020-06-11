@@ -192,6 +192,24 @@ class MathCppPINVOKE {
   }
 
 
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_new_Result")]
+  public static extern global::System.IntPtr new_Result();
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_delete_Result")]
+  public static extern void delete_Result(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_Result_addResult_set")]
+  public static extern void Result_addResult_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_Result_addResult_get")]
+  public static extern int Result_addResult_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_Result_mulResult_set")]
+  public static extern void Result_mulResult_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_Result_mulResult_get")]
+  public static extern int Result_mulResult_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_new_MyCalc")]
   public static extern global::System.IntPtr new_MyCalc();
 
@@ -199,7 +217,10 @@ class MathCppPINVOKE {
   public static extern void delete_MyCalc(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_MyCalc_DoMath")]
-  public static extern void MyCalc_DoMath(global::System.Runtime.InteropServices.HandleRef jarg1);
+  public static extern void MyCalc_DoMath(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
+
+  [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_MyCalc_DoMathSwigExplicitMyCalc")]
+  public static extern void MyCalc_DoMathSwigExplicitMyCalc(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3, global::System.Runtime.InteropServices.HandleRef jarg4);
 
   [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_MyCalc_add")]
   public static extern int MyCalc_add(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2, int jarg3);
@@ -220,5 +241,5 @@ class MathCppPINVOKE {
   public static extern void MyCalc_PrintSwigExplicitMyCalc(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
   [global::System.Runtime.InteropServices.DllImport("MathCpp", EntryPoint="CSharp_MyCalc_director_connect")]
-  public static extern void MyCalc_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, MyCalc.SwigDelegateMyCalc_0 delegate0, MyCalc.SwigDelegateMyCalc_1 delegate1, MyCalc.SwigDelegateMyCalc_2 delegate2);
+  public static extern void MyCalc_director_connect(global::System.Runtime.InteropServices.HandleRef jarg1, MyCalc.SwigDelegateMyCalc_0 delegate0, MyCalc.SwigDelegateMyCalc_1 delegate1, MyCalc.SwigDelegateMyCalc_2 delegate2, MyCalc.SwigDelegateMyCalc_3 delegate3);
 }

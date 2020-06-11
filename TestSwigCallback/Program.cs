@@ -14,10 +14,9 @@ namespace TestSwigCallback
             {
                 Console.WriteLine("begin");
                 MyCalc x = new MyCSharpCalc();
-                var three = x.add(1, 2);
-                x.Print(three.ToString());
-
-                x.DoMath();
+                var r = new Result();
+                x.DoMath(1, 2, r);
+                Console.WriteLine(r.addResult.ToString());
             }
             catch (Exception e)
             {

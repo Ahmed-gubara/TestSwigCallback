@@ -47,39 +47,46 @@ public class MyCalc : global::System.IDisposable {
     SwigDirectorConnect();
   }
 
-  public void DoMath() {
-    MathCppPINVOKE.MyCalc_DoMath(swigCPtr);
+  public virtual void DoMath(int n1, int n2, Result r) {
+    if (SwigDerivedClassHasMethod("DoMath", swigMethodTypes0)) MathCppPINVOKE.MyCalc_DoMathSwigExplicitMyCalc(swigCPtr, n1, n2, Result.getCPtr(r)); else MathCppPINVOKE.MyCalc_DoMath(swigCPtr, n1, n2, Result.getCPtr(r));
+    if (MathCppPINVOKE.SWIGPendingException.Pending) throw MathCppPINVOKE.SWIGPendingException.Retrieve();
   }
 
   public virtual int add(int arg0, int arg1) {
-    int ret = (SwigDerivedClassHasMethod("add", swigMethodTypes0) ? MathCppPINVOKE.MyCalc_addSwigExplicitMyCalc(swigCPtr, arg0, arg1) : MathCppPINVOKE.MyCalc_add(swigCPtr, arg0, arg1));
+    int ret = (SwigDerivedClassHasMethod("add", swigMethodTypes1) ? MathCppPINVOKE.MyCalc_addSwigExplicitMyCalc(swigCPtr, arg0, arg1) : MathCppPINVOKE.MyCalc_add(swigCPtr, arg0, arg1));
     return ret;
   }
 
   public virtual int Mul(int arg0, int arg1) {
-    int ret = (SwigDerivedClassHasMethod("Mul", swigMethodTypes1) ? MathCppPINVOKE.MyCalc_MulSwigExplicitMyCalc(swigCPtr, arg0, arg1) : MathCppPINVOKE.MyCalc_Mul(swigCPtr, arg0, arg1));
+    int ret = (SwigDerivedClassHasMethod("Mul", swigMethodTypes2) ? MathCppPINVOKE.MyCalc_MulSwigExplicitMyCalc(swigCPtr, arg0, arg1) : MathCppPINVOKE.MyCalc_Mul(swigCPtr, arg0, arg1));
     return ret;
   }
 
   public virtual void Print(string v) {
-    if (SwigDerivedClassHasMethod("Print", swigMethodTypes2)) MathCppPINVOKE.MyCalc_PrintSwigExplicitMyCalc(swigCPtr, v); else MathCppPINVOKE.MyCalc_Print(swigCPtr, v);
+    if (SwigDerivedClassHasMethod("Print", swigMethodTypes3)) MathCppPINVOKE.MyCalc_PrintSwigExplicitMyCalc(swigCPtr, v); else MathCppPINVOKE.MyCalc_Print(swigCPtr, v);
     if (MathCppPINVOKE.SWIGPendingException.Pending) throw MathCppPINVOKE.SWIGPendingException.Retrieve();
   }
 
   private void SwigDirectorConnect() {
-    if (SwigDerivedClassHasMethod("add", swigMethodTypes0))
-      swigDelegate0 = new SwigDelegateMyCalc_0(SwigDirectorMethodadd);
-    if (SwigDerivedClassHasMethod("Mul", swigMethodTypes1))
-      swigDelegate1 = new SwigDelegateMyCalc_1(SwigDirectorMethodMul);
-    if (SwigDerivedClassHasMethod("Print", swigMethodTypes2))
-      swigDelegate2 = new SwigDelegateMyCalc_2(SwigDirectorMethodPrint);
-    MathCppPINVOKE.MyCalc_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2);
+    if (SwigDerivedClassHasMethod("DoMath", swigMethodTypes0))
+      swigDelegate0 = new SwigDelegateMyCalc_0(SwigDirectorMethodDoMath);
+    if (SwigDerivedClassHasMethod("add", swigMethodTypes1))
+      swigDelegate1 = new SwigDelegateMyCalc_1(SwigDirectorMethodadd);
+    if (SwigDerivedClassHasMethod("Mul", swigMethodTypes2))
+      swigDelegate2 = new SwigDelegateMyCalc_2(SwigDirectorMethodMul);
+    if (SwigDerivedClassHasMethod("Print", swigMethodTypes3))
+      swigDelegate3 = new SwigDelegateMyCalc_3(SwigDirectorMethodPrint);
+    MathCppPINVOKE.MyCalc_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
     global::System.Reflection.MethodInfo methodInfo = this.GetType().GetMethod(methodName, global::System.Reflection.BindingFlags.Public | global::System.Reflection.BindingFlags.NonPublic | global::System.Reflection.BindingFlags.Instance, null, methodTypes, null);
     bool hasDerivedMethod = methodInfo.DeclaringType.IsSubclassOf(typeof(MyCalc));
     return hasDerivedMethod;
+  }
+
+  private void SwigDirectorMethodDoMath(int n1, int n2, global::System.IntPtr r) {
+    DoMath(n1, n2, new Result(r, false));
   }
 
   private int SwigDirectorMethodadd(int arg0, int arg1) {
@@ -94,15 +101,18 @@ public class MyCalc : global::System.IDisposable {
     Print(v);
   }
 
-  public delegate int SwigDelegateMyCalc_0(int arg0, int arg1);
+  public delegate void SwigDelegateMyCalc_0(int n1, int n2, global::System.IntPtr r);
   public delegate int SwigDelegateMyCalc_1(int arg0, int arg1);
-  public delegate void SwigDelegateMyCalc_2(string v);
+  public delegate int SwigDelegateMyCalc_2(int arg0, int arg1);
+  public delegate void SwigDelegateMyCalc_3(string v);
 
   private SwigDelegateMyCalc_0 swigDelegate0;
   private SwigDelegateMyCalc_1 swigDelegate1;
   private SwigDelegateMyCalc_2 swigDelegate2;
+  private SwigDelegateMyCalc_3 swigDelegate3;
 
-  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(int), typeof(int) };
+  private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] { typeof(int), typeof(int), typeof(Result) };
   private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(int), typeof(int) };
-  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(string) };
+  private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(int), typeof(int) };
+  private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] { typeof(string) };
 }

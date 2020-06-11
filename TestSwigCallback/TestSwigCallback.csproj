@@ -48,6 +48,7 @@
     <Compile Include="Generated\MathCpp.cs" />
     <Compile Include="Generated\MathCppPINVOKE.cs" />
     <Compile Include="Generated\MyCalc.cs" />
+    <Compile Include="Generated\Result.cs" />
     <Compile Include="MyCSharpCalc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
